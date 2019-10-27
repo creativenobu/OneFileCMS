@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: OneFileCMS
+description: A simple CMS contained in a single, database-less, PHP/JavaScript.
+lang: en
