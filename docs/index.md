@@ -1,7 +1,7 @@
 # One File CMS
 The newer rewrite of the good'ol OneFileCMS built for PHP 7+ with a modern approach in design.
 
-> Note: You can access the legacy version in the `legacy` branch [HERE](./tree/legacy).
+> Note: You can access the legacy version in the `legacy` branch [HERE](gh-legacy).
 
 ## Why a rewrite?
 While the original OneFileCMS did the job just right, it was not updated for a while. And with depreciation of PHP 5 for
@@ -25,3 +25,5 @@ determined what route to take.
 
 You're still invited to propose an approach for the rewrite, just create a issue with the `discussion` tag and we can
 discuss more about it there.
+
+[gh-legacy]: https://github.com/creativenobu/OneFileCMS/tree/legacy
