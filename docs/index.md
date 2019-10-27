@@ -6,12 +6,6 @@ OneFileCMS is a simple CMS (Content Management System) contained entirely in a s
 
 With basic editing, upload, and file managing functions, OneFileCMS can maintain an entire website completely in-browser without any external programs.
 
-### File Manager
-![OneFileCMS](http://self-evident.github.com/OneFileCMS/images/OFCMS_screenshot.04.png)
-
-### Text Editor
-![OneFileCMS](http://self-evident.github.com/OneFileCMS/images/OFCMS_screenshot_edit.02.png)
-
 --------------------------------------------------------------------------------
 ## Features
  
