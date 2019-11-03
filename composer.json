@@ -7,7 +7,7 @@
       "BSD-3-Clause"
     ],
     "scripts": {
-      "bundle": "php bundle.php",
+      "bundle": "php bundle",
       "clean": "rm onefilecms4.php"
     },
     "authors": [

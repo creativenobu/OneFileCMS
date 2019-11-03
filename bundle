@@ -8,20 +8,19 @@ $ofcms = 'onefilecms4.php';
 $src_dir = './src/';
 $files = [
     'config.php',
-    'functions.php',
-    'localization.php',
-    'misc.php',
+    'misc_functions.php',
+    'svg_icons.php',
+    'page_functions.php',
+    'js_functions.php',
+    'style_functions.php',
+    'main_logic.php',
+    'index.php',
 ];
 
 foreach($files as $file) {
-    // strip away the php tags
-    $temp_content = file_get_contents($src_dir . $file);
-    $temp_content = str_replace('<?php', '', $temp_content);
     // append to the bundle
-    $bundle_content .= $temp_content;
+    $bundle_content .= file_get_contents($src_dir . $file);
 }
-
-$bundle_content = "<?php\n\n" . $bundle_content;
 
 $fp = fopen($ofcms, 'w');
 if (!empty($fp)) {
