@@ -1,12 +1,14 @@
 #!/usr/bin/env php
 <?php
 
-$bundle_content = '';
-$ofcms = 'onefilecms4.php';
+$build_dir = 'build/';
+$src_dir = 'src/';
+
+// Output of the bundled files
+$output_file = 'ofcms.php';
 
 // PHP files to bundle
-$src_dir = './src/';
-$files = [
+$input_files = [
     'config.php',
     'misc_functions.php',
     'svg_icons.php',
@@ -17,18 +19,23 @@ $files = [
     'index.php',
 ];
 
-foreach($files as $file) {
+$bundle_content = '';
+foreach($input_files as $file) {
     // append to the bundle
     $bundle_content .= file_get_contents($src_dir . $file);
 }
 
-$fp = fopen($ofcms, 'w');
+// Create directory if it doesn't exists
+if (!is_dir($build_dir)) {
+    mkdir($build_dir, 755);
+}
+
+$fp = fopen($build_dir . $output_file, 'w');
 if (!empty($fp)) {
     if (fwrite($fp, $bundle_content)) {
         echo "File bundled!\r\n";
     } else {
         die('Could not write to file.');
-        exit(-1);
     }
 }
 

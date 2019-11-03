@@ -8,7 +8,7 @@
     ],
     "scripts": {
       "bundle": "php bundle",
-      "clean": "rm onefilecms4.php"
+      "clean": "rm -rfv build/"
     },
     "authors": [
         {
