@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+
+$bundle_content = '';
+$ofcms = 'onefilecms4.php';
+
+// PHP files to bundle
+$src_dir = './src/';
+$files = [
+    'config.php',
+    'functions.php',
+    'localization.php',
+    'misc.php',
+];
+
+foreach($files as $file) {
+    // strip away the php tags
+    $temp_content = file_get_contents($src_dir . $file);
+    $temp_content = str_replace('<?php', '', $temp_content);
+    // append to the bundle
+    $bundle_content .= $temp_content;
+}
+
+$bundle_content = "<?php\n\n" . $bundle_content;
+
+$fp = fopen($ofcms, 'w');
+if (!empty($fp)) {
+    if (fwrite($fp, $bundle_content)) {
+        echo "File bundled!\r\n";
+    } else {
+        die('Could not write to file.');
+        exit(-1);
+    }
+}
+
+exit(0);

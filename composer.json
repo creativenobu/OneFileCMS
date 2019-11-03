@@ -1,0 +1,20 @@
+{
+    "name": "creativenobu/onefilecms",
+    "description": "One file to manage your CMS",
+    "type": "project",
+    "license": [
+      "MIT",
+      "BSD-3-Clause"
+    ],
+    "scripts": {
+      "bundle": "php bundle.php",
+      "clean": "rm onefilecms4.php"
+    },
+    "authors": [
+        {
+            "name": "Arnold Chand",
+            "email": "arnold.chand@gmail.com"
+        }
+    ],
+    "require": {}
+}
